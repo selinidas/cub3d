@@ -1,0 +1,14 @@
+R  1080 720
+
+NO ./textures/grey.xpm
+SO ./textures/grey.xpm
+WE ./textures/grey.xpm
+EA ./textures/grey.xpm
+
+S ./textures/barrel.xpm
+F 0,0,0
+C 15,30,10
+
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 2 2 2 2 2 2 2 2 2 2 2 2 W 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1

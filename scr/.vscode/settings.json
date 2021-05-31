@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ostream": "c",
+        "cub3d.h": "c"
+    }
+}
