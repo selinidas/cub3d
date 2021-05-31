@@ -6,7 +6,7 @@
 /*   By: lisanche <lisanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 21:14:49 by lissettesan       #+#    #+#             */
-/*   Updated: 2021/05/30 16:21:52 by lisanche         ###   ########.fr       */
+/*   Updated: 2021/05/31 18:26:00 by lisanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,47 +37,47 @@ int	ft_atoi(char *line, int *i)
 int	ft_strerror(int err)
 {
 	if (err == -1)
-		write(2, "Error UPS! No se puede abrir el archivo (FD)\n", 44);
+		write(2, "Error UPS! No se puede abrir el archivo (FD) \n", 45);
 	if (err == -2)
-		write(2, "Error UPS! No se encuentra el archivo (GNL)\n", 43);
+		write(2, "Error UPS! No se encuentra el archivo (GNL) \n", 44);
 	if (err == -3)
-		write(2, "Error UPS! La resolucion esta duplicada\n", 39);
+		write(2, "Error UPS! La resolucion esta duplicada \n", 40);
 	if (err == -4)
-		write(2, "Error UPS! La resoslucion es incorrecta\n", 39);
+		write(2, "Error UPS! La resoslucion es incorrecta \n", 40);
 	if (err == -5)
-		write(2, "Error UPS! E suelo/techo estan duplicados\n", 42);
+		write(2, "Error UPS! E suelo/techo estan duplicados \n", 43);
 	if (err == -6)
-		write(2, "Error UPS! El suelo/techo son invalidos\n", 37);
+		write(2, "Error\n UPS! El suelo/techo son invalido \n", 41);
 	if (err == -7)
-		write(2, "Error UPS! Tesxtura duplicada\n", 29);
+		write(2, "Error\n UPS! Tesxtura duplicada \n", 30);
 	if (err == -8)
-		write(2, "Error UPS! Falla malloc texturas\n", 32);
+		write(2, "Error\n UPS! Falla malloc texturas \n", 31);
 	if (err == -9)
-		write(2, "Error UPS! La textura de la imagen es incorrecta\n", 48);
+		write(2, "Error\n UPS! La textura de la imagen es incorrecta \n", 50);
 	if (err == -10)
-		write(2, "Error UPS! Linea invalida en archivo\n", 36);
+		write(2, "Error\n UPS! Linea invalida en archivo \n", 37);
 	if (err == -11)
-		write(2, "Error UPS! Falla malloc mapa\n", 28);
+		write(2, "Error\n UPS! Falla malloc mapa \n", 29);
 	return (-1);
 }
 
 int	ft_strerror2(int err)
 {
 	if (err == -12)
-		write(2, "Error UPS! Mapa incorrecto\n", 30);
+		write(2, "Error\n UPS! Mapa incorrecto \n", 31);
 	if (err == -13)
-		write(2, "Error UPS! El mapa no es un rectagulo\n", 37);
+		write(2, "Error\n UPS! El mapa no es un rectagulo \n", 38);
 	if (err == -14)
-		write(2, "Error UPS! No se especifica la resolucion\n", 41);
+		write(2, "Error\n UPS! No se especifica la resolucion \n", 42);
 	if (err == -15)
-		write(2, "Error UPS! No se encuentra la textura\n", 37);
+		write(2, "Error\n UPS! No se encuentra la textura \n", 38);
 	if (err == -16)
-		write(2, "Error UPS! No se encuentra el color techo/floor\n", 47);
+		write(2, "Error\n UPS! No se encuentra el color techo/floor \n", 48);
 	if (err == -17)
-		write(2, "Error UPS! No hay posicion inicial\n", 34);
+		write(2, "Error\n UPS! No hay posicion inicial \n", 35);
 	if (err == -18)
-		write(2, "Error UPS! Multiples posiciones de inicios\n", 42);
+		write(2, "Error\n UPS! Multiples posiciones de inicios \n", 43);
 	if (err == -19)
-		write(2, "Error UPS! El mapa no tiene paredes\n", 34);
+		write(2, "Error\n UPS! El mapa no tiene paredes \n", 35);
 	return (-1);
 }

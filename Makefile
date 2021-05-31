@@ -22,6 +22,7 @@ SRC = cub3d \
 	math \
 	bitmap \
 	error \
+	other_ft \
 
 FIL = $(addsuffix .c, $(addprefix scr/, $(SRC)))
 

@@ -6,7 +6,7 @@
 /*   By: lisanche <lisanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 17:19:52 by lisanche          #+#    #+#             */
-/*   Updated: 2021/05/31 17:32:29 by lisanche         ###   ########.fr       */
+/*   Updated: 2021/05/31 18:31:19 by lisanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,12 @@ int	ft_map(t_all *s, char *line, int *i)
 	return (0);
 }
 
-static int complete_ftm(t_all **s)
+static int 	complete_ftm(t_all **s)
 {
 	(*s)->spr = malloc(sizeof(t_spr) * (*s)->map.spr);
 	if ((*s)->spr == NULL)
 		return (-1);
+	return (0);
 }
 
 int	ft_slist(t_all *s)

@@ -1,13 +1,13 @@
 R  1080 720
 
 NO ./textures/brick.xpm
-SO ./textures/blue.xpm
+SO ./textures/grey.xpm
 WE ./textures/wood.xpm
 EA ./textures/grey.xpm
 
 S ./textures/chest.xpm
-F 224,172,105
-C 256,0,0
+F 220,118,51
+C 224,247,250
 
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
