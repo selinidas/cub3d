@@ -6,7 +6,7 @@
 /*   By: lisanche <lisanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 21:44:27 by lisanche          #+#    #+#             */
-/*   Updated: 2021/05/31 16:48:29 by lisanche         ###   ########.fr       */
+/*   Updated: 2021/05/31 17:28:38 by lisanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,20 @@ int	ft_slablen(t_all *s, char *line)
 	return (count);
 }
 
+static char	*complete_ft(char *line, t_all *s, char **slab)
+{
+	*slab = malloc(sizeof(char) * (ft_slablen(s, line) + 1));
+	if (*slab == NULL)
+		return (NULL);
+	return (0);
+}
+
 char	*ft_slab(t_all *s, char *line, int *i)
 {
 	char	*slab;
 	int		j;
 
-	slab = malloc(sizeof(char) * (ft_slablen(s, line) + 1));
-	if (slab == NULL)
-		return (NULL);
+	complete_ft(line, s, &slab);
 	j = 0;
 	while (line[*i] != '\0')
 	{
@@ -109,33 +115,4 @@ char	*ft_slab(t_all *s, char *line, int *i)
 	}
 	slab[j] = '\0';
 	return (slab);
-}
-
-int	ft_map(t_all *s, char *line, int *i)
-{
-	char	**tmp;
-	int		j;
-
-	s->err.m = 1;
-	tmp = malloc(sizeof(char *) * (s->map.y + 2));
-	if (tmp == NULL)
-		return (-11);
-	j = -1;
-	while (++j < s->map.y)
-		tmp[j] = s->map.tab[j];
-	tmp[s->map.y] = ft_slab(s, line, i);
-	if (tmp[s->map.y] == NULL)
-	{
-		free(tmp);
-		return (-12);
-	}
-	tmp[s->map.y + 1] = NULL;
-	if (s->map.y > 0)
-		free(s->map.tab);
-	s->map.tab = tmp;
-	s->map.y++;
-	s->map.x = ft_slablen(s, line);
-	if (s->map.x == -1)
-		return (-13);
-	return (0);
 }

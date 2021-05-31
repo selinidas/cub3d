@@ -6,7 +6,7 @@
 /*   By: lisanche <lisanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 21:44:38 by lisanche          #+#    #+#             */
-/*   Updated: 2021/05/31 16:45:39 by lisanche         ###   ########.fr       */
+/*   Updated: 2021/05/31 17:30:54 by lisanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,34 +93,4 @@ void	ft_pos(t_all *s)
 		}
 		j = -1;
 	}
-}
-
-int	ft_slist(t_all *s)
-{
-	int		i;
-	int		j;
-	int		k;
-
-	if (s->spr != NULL)
-		free(s->spr);
-	s->spr = malloc(sizeof(t_spr) * s->map.spr);
-	if (s->spr == NULL)
-		return (-1);
-	i = 0;
-	j = 0;
-	while (j < s->map.y)
-	{
-		k = 0;
-		while (k < s->map.x)
-		{
-			if (s->map.tab[j][k] == '2')
-			{
-				s->spr[i].y = (double)j + 0.5;
-				s->spr[i++].x = (double)k + 0.5;
-			}
-			k++;
-		}
-		j++;
-	}
-	return (1);
 }
