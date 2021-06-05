@@ -6,7 +6,7 @@ CFLAGS = -O3 -Wall -Wextra -Werror
 
 MLX = mlxopengl
 
-LXFLAGS = -lmlx -framework OpenGL -framework AppKit
+LXFLAGS =  -lmlx -lm -lbsd -lX11 -lXext
 
 HEADER = cub3d.h
 
